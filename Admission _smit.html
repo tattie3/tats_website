@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions | Smit Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #ff0000, #cc0000);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header h2 {
+      font-size: 1.2em;
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    nav {
+      background-color: #111;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 10px 20px;
+      text-decoration: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff4d4d;
+    }
+
+    .hero {
+	background-image: url('IMG-20251025-WA0367.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 350px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	text-align: center;
+	position: relative;
+	background-size-y: cover;
+}
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero h2 {
+      position: relative;
+      font-size: 2.5em;
+      z-index: 1;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #cc0000;
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .info {
+      background: white;
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .info h3 {
+      color: #cc0000;
+      margin-top: 0;
+    }
+
+    .info ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .info li {
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .info li:last-child {
+      border: none;
+    }
+
+    form {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    form button {
+      background: #cc0000;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.1s;
+    }
+
+    form button:hover {
+      background: #ff0000;
+    }
+
+    form button:active {
+      transform: scale(0.97);
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      .hero h2 { font-size: 2em; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SMIT ACADEMY</h1>
+    <h2>Empowering Students for a Bright Future</h2>
+  </header>
+
+  <nav>
+      <a href="smit%20wesite1.html">Home</a> <a href="About_smit.html">About</a>
+	  <a href="Admission%20_smit.html">Admissions</a> <a href="Academics_.html">Academics</a>
+	  <a href="CONTACT%20.html">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Join Our Learning Family</h2>
+  </section>
+
+  <div class="container">
+    <h2 class="section-title">Admission Information</h2>
+    <div class="info">
+      <h3>Eligibility & Requirements</h3>
+      <ul>
+        <li>Applicants must submit a completed application form.</li>
+        <li>Previous academic records and transfer certificates are required.</li>
+        <li>Entrance test and personal interview for Grade 1 and above.</li>
+        <li>Birth certificate and recent passport-size photos.</li>
+      </ul>
+    </div>
+
+    <div class="info">
+      <h3>Important Dates</h3>
+      <ul>
+        <li><strong>Application Opens:</strong> March 1, 2025</li>
+        <li><strong>Entrance Test:</strong> April 15, 2025</li>
+        <li><strong>Final Admission List:</strong> May 5, 2025</li>
+        <li><strong>School Reopens:</strong> June 10, 2025</li>
+      </ul>
+    </div>
+
+    <h2 class="section-title">Admission Form</h2>
+    <form action="https://formsubmit.co/smitacademy2019@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New Admission Form Submission">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
+      <label for="fullname">Full Name</label>
+      <input id="fullname" type="text" name="Full Name" placeholder="Enter your full name" required>
+
+      <label for="dob">Date of Birth</label>
+      <input id="dob" type="date" name="Date of Birth" required>
+
+      <label for="grade">Grade Applying For</label>
+      <select id="grade" name="Grade" required>
+        <option value="">Select Grade</option>
+        <option>Nursery</option>
+        <option>KG</option>
+        <option>Grade 1</option>
+        <option>Grade 2</option>
+        <option>Grade 3</option>
+        <option>Grade 4</option>
+        <option>Grade 5</option>
+        <option>Grade 6</option>
+        <option>Grade 7</option>
+        <option>Form 1</option>
+        <option>Form 2</option>
+        <option>Form 3</option>
+        <option>Form 4</option>
+        <option>Form 5</option>
+        <option>Form 6</option>
+      </select>
+
+      <label for="parent">Parent / Guardian Name</label>
+      <input id="parent" type="text" name="Parent Name" placeholder="Enter parent's full name" required>
+
+      <label for="contact">Contact Number</label>
+      <input id="contact" type="tel" name="Contact Number" placeholder="e.g. +263" required>
+
+      <label for="address">Address</label>
+      <textarea id="address" name="Address" rows="4" placeholder="Enter your address" required></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>© 2026 Smit Academy | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Academics - School Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+    }
+
+    header {
+      background-color: #002b5c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container
+ {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #002b5c;
+    }
+
+    .subjects, .departments {
+      margin-top: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #002b5c;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>School Name</h1>
+  <nav>
+    <a href="index.html">Home</a>
+[27/10, 11:32] ChatGPT: <a href="about.html">About</a>
+    <a href="admission.html">Admission</a>
+    <a href="academics.html">Academics</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Academic Overview</h2>
+  <p>Our school offers a balanced academic curriculum that supports intellectual, social, and emotional growth. We focus on core subjects and practical learning experiences to prepare students for their future careers and life beyond school.</p>
+
+  <div class="subjects">
+    <h2>Subjects Offered</h2>
+    
+    <div class="card">
+      <h3>Sciences</h3>
+      <p>Physics, Chemistry, Biology</p>
+    </div>
+    
+    <div class="card">
+      <h3>Mathematics</h3>
+      <p>Pure Mathematics, Additional Maths</p>
+    </div>
+
+    <div class="card">
+      <h3>Humanities</h3>
+      <p>History, Geography</p>
+    </div>
+
+    <div class="card">
+      <h3>Languages</h3>
+      <p>English Language, Literature, Shona, French</p>
+    </div>
+
+    <div class="card">
+      <h3>Commercials</h3>
+      <p>Business Studies, Accounting, Economics</p>
+    </div>
+
+    <div class="card">
+      <h3>Technology</h3>
+      <p>ICT, Computer Science</p>
+    </div>
+  </div>
+
+  <div class="departments">
+    <h2>Departments</h2>
+    <ul>
+      <li>Science Department</li>
+<li>Mathematics Department</li>
+      <li>Humanities Department</li>
+      <li>Languages Department</li>
+      <li>Commercial Department</li>
+      <li>ICT & Computing Department</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>2025 School Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

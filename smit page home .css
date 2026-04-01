@@ -1,0 +1,37 @@
+<style> body{
+	font-family: Arial,sans-serif ;background-color:#fof8ff;margin:o;padding:0:
+} 
+header {
+	background-color: #FF0000;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+nav {
+	background: black;
+	padding: 10px;
+	text-align: center;
+}
+nav a{color:white ;margin:15px;text-decoration:none;font-weight:bold;
+	
+}
+section{padding:20px;
+	
+}
+ footer{
+	background: white;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	width: 100%;
+}
+
+
+.auto-style1 {
+	font-family: Arial;
+	color: red;
+}
+
+
+</style>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Academics | Smit Academy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+<style>
+  /* Reset & Base */
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9fbff;
+    color: #333;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* Header */
+  header {
+    background: linear-gradient(135deg, #e00000, #b80000);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: fadeSlideDown 2s ease forwards;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* Navigation Bar */
+  nav {
+    background: #111;
+    padding: 15px 0;
+    text-align: center;
+    animation: fadeSlideUp 2s ease forwards;
+  }
+  nav a {
+    color: white;
+    margin: 0 18px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: color 0.3s ease, letter-spacing 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffcc00;
+    letter-spacing: 1px;
+  }
+  nav a.active {
+    color: #ff0000;
+  }
+
+  /* Animation Keyframes */
+  @keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeSlideDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Container */
+  .container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+  }
+  .container.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  h2 {
+    color: #b80000;
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: #555;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.05em;
+  }
+
+  /* Subject Cards */
+  .subjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .card h3 {
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  /* Departments */
+  .departments {
+    margin-top: 50px;
+  }
+  .departments ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  .departments li {
+    background-color: #ffffff;
+    margin: 10px auto;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    max-width: 400px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .departments li:hover {
+    background: #ffe6e6;
+    transform: scale(1.02);
+  }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+  }
+  footer p {
+    margin: 8px 0;
+    font-size: 0.95em;
+  }
+  footer .social-icons {
+    margin-top: 12px;
+  }
+  footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+  }
+  footer .social-icons a:hover {
+    color: #ff0000;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    header h1 { font-size: 2em; }
+    nav a { display: block; margin: 10px 0; }
+    .container { margin: 30px auto; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Smit Academy</h1>
+</header>
+
+<nav>
+  <a href="smit%20wesite1.html">Home</a>
+  <a href="About_smit.html">About</a>
+  <a href="Admission%20_smit.html">Admissions</a>
+  <a class="active" href="Academics_.html">Academics</a>
+  <a href="CONTACT%20.html">Contact</a>
+</nav>
+
+<div class="container">
+  <h2>Academic Overview</h2>
+  <p>
+    At <strong>Smit Academy</strong>, we believe in nurturing well-rounded students through academic excellence,
+    creativity, and innovation. Our curriculum blends rigorous academics with digital skills and real-world experiences.
+  </p>
+
+  <div class="subjects">
+    <div class="card"><h3>Sciences</h3><p>Physics, Chemistry, Biology</p></div>
+    <div class="card"><h3>Mathematics</h3><p>Pure Mathematics, Additional Mathematics</p></div>
+    <div class="card"><h3>Humanities</h3><p>History, Geography</p></div>
+    <div class="card"><h3>Languages</h3><p>English, Literature</p></div>
+    <div class="card"><h3>Commercials</h3><p>Business Studies, Accounting, Economics</p></div>
+    <div class="card"><h3>Technology</h3><p>ICT, Computer Science</p></div>
+  </div>
+
+  <div class="departments">
+    <h2>Departments</h2>
+    <ul>
+      <li>Science Department</li>
+      <li>Mathematics Department</li>
+      <li>Humanities Department</li>
+      <li>Languages Department</li>
+      <li>Commercial Department</li>
+      <li>ICT & Computing Department</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>&#128205; 123 Academy Road, Harare, Zimbabwe</p>
+  <p>&#9993; info@smitacademy.com | &#128222; +263 77 123 4567</p>
+  <div class="social-icons">
+    <a href="https://instagram.com/smitacademy" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://facebook.com/smitacademy" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  </div>
+  <p>&copy; 2026 Smit Academy — Inspiring Growth & Excellence.</p>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.container, .card').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

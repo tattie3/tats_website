@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smit Academy | Empowering Future Leaders</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Poppins',sans-serif;background:#f5f7fa;color:#333;scroll-behavior:smooth;}
+
+  @keyframes fadeSlideIn{0%{opacity:0;transform:translateY(30px);}100%{opacity:1;transform:translateY(0);}}
+
+
+  header{
+    background:linear-gradient(135deg,#ff0000,#a00000);
+    background-size:300% 300%;
+    animation:fadeSlideIn 2s ease forwards;
+    color:white;text-align:center;
+    padding:100px 20px 80px;
+  }
+  header h1{font-size:3em;letter-spacing:2px;margin-bottom:10px;}
+  header h2{font-size:1.5em;font-weight:300;}
+
+  nav{background:#111;display:flex;justify-content:center;flex-wrap:wrap;padding:14px 0;}
+  nav a{color:white;margin:10px 20px;text-decoration:none;font-weight:600;position:relative;transition:color 0.3s,transform 0.3s;}
+  nav a:hover,nav a.active{color:#ff0000;transform:scale(1.1);}
+  nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:#ff0000;transition:width 0.3s;}
+  nav a:hover::after,nav a.active::after{width:100%;}
+
+  .fade-in{opacity:0;transform:translateY(40px);transition:opacity 1s ease,transform 1s ease;}
+  .fade-in.visible{opacity:1;transform:translateY(0);}
+
+  section.hero{text-align:center;padding:60px 20px;max-width:1000px;margin:auto;}
+  section.hero h2{color:#d40000;font-size:2em;margin-bottom:20px;}
+  section.hero p{font-size:1.1em;line-height:1.6;margin-bottom:40px;}
+
+  .video-section{text-align:center;padding:60px 20px;}
+  .video-section h2{color:#d40000;font-size:2em;margin-bottom:30px;}
+  .videos{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;}
+  .videos video{width:450px;max-width:95%;border-radius:20px;box-shadow:0 8px 20px rgba(0,0,0,0.2);transition:transform 0.3s ease,box-shadow 0.3s ease;}
+  .videos video:hover{transform:scale(1.03);box-shadow:0 12px 25px rgba(0,0,0,0.3);}
+
+  .stats-section{background: #fff7f7;text-align:center;padding:80px 20px;}
+  .stats-section h2{color:#d40000;font-size:2em;margin-bottom:15px;}
+  .stats-section p{font-size:1.1em;margin-bottom:50px;color:#333;}
+  .stats-container{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
+  .stat-card{
+    flex: 1 1 220px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .stat-card:hover{transform: translateY(-8px);box-shadow: 0 12px 25px rgba(0,0,0,0.2);}
+  .stat-circle{
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background: conic-gradient(#d40000 0deg, #f0f0f0 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 15px rgba(212,0,0,0.3);
+  }
+  .stat-circle .stat-number{
+    position:absolute;
+    font-size:1.8em;
+    font-weight:700;
+    color:#d40000;
+    z-index:2;
+  }
+  .stat-card h3{font-size:1.1em;color: #333;margin-top:10px;}
+
+  .school-life{background:#fff;padding:80px 20px;text-align:center;}
+  .school-life h2{color:#d40000;font-size:2em;margin-bottom:40px;}
+  .life-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
+  .life-card{background:white;border-radius:20px;box-shadow:0 6px 18px rgba(0,0,0,0.1);overflow:hidden;width:360px;transition:transform 0.3s,box-shadow 0.3s;}
+  .life-card:hover{transform:translateY(-8px);box-shadow:0 12px 25px rgba(0,0,0,0.2);}
+  .life-card img{width:100%;height:auto;display:block;}
+  .life-card-content{padding:20px;}
+  .life-card-content h3{color:#d40000;font-size:1.4em;margin-bottom:10px;}
+  .life-card-content p{font-size:1em;margin-bottom:20px;line-height:1.5;}
+  .life-card-content a{display:inline-block;background:#d40000;color:white;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:600;transition:background 0.3s ease,transform 0.3s ease;}
+  .life-card-content a:hover{background:#a00000;transform:scale(1.05);}
+
+  footer{background:#111;color:white;text-align:center;padding:30px;margin-top:60px;font-size:0.95em;letter-spacing:0.5px;}
+  footer .socials{margin-top:15px;}
+  footer .socials a{display:inline-block;color:white;background:#d40000;width:40px;height:40px;line-height:40px;border-radius:50%;margin:0 8px;text-decoration:none;font-size:18px;transition:background 0.3s,transform 0.3s;}
+  footer .socials a:hover{background:#a00000;transform:scale(1.1);}
+  footer span{color:#ff4d4d;}
+
+  #backToTop{position:fixed;bottom:40px;right:40px;background:#d40000;color:white;border:none;outline:none;padding:15px 18px;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);opacity:0;pointer-events:none;transition:opacity 0.4s ease;z-index:1000;}
+  #backToTop.show{opacity:1;pointer-events:auto;}
+  #backToTop:hover{background:#a00000;}
+
+  @media(max-width:768px){
+    header h1{font-size:2em;}
+    header h2{font-size:1.2em;}
+    nav{flex-direction:column;}
+    nav a{margin:8px 0;}
+    .stats-container{flex-direction:column;gap:30px;}
+    .stat-card{width:80%;margin:0 auto;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Smit Academy</h1>
+  <h2>Empowering Future Leaders</h2>
+</header>
+
+<nav>
+  <a class="active" href="#">Home</a>
+  <a href="About_smit.html">About</a>
+  <a href="Admission_smit.html">Admissions</a>
+  <a href="Academics_.html">Academics</a> <a href="CONTACT%20.html">Contact</a>
+</nav>
+
+<section class="hero fade-in">
+  <h2>Welcome to Smit Academy</h2>
+  <p>At Smit Academy, we nurture the minds and talents of tomorrow. From strong academics to creative exploration, positive values to real-world readiness — we prepare each student to thrive in a changing world.</p>
+</section>
+
+<section class="video-section fade-in">
+  <h2>See Us In Action</h2>
+  <div class="videos">
+    <video controls loop autoplay muted src="gtt1.mp4" type="video/mp4"></video>
+    <video controls loop autoplay muted src="gtt2.mp4" type="video/mp4"></video>
+  </div>
+</section>
+
+<section class="stats-section fade-in">
+  <h2>Our Achievements & Stats</h2>
+  <p>We take pride in our academic excellence and holistic development.</p>
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-circle" data-target="97" data-percent="true">
+		  <span class="stat-number" style="color: #000000">0%</span></div>
+      <h3>ZIMSEC Grade 7 Pass Rate</h3>
+    </div>
+    <div class="stat-card">
+      <div class="stat-circle" data-target="92" data-percent="true">
+		  <span class="stat-number" style="color: #000000">0%</span></div>
+      <h3>IGCSE O-Level Pass Rate</h3>
+    </div>
+    <div class="stat-card">
+      <div class="stat-circle" data-target="95" data-percent="true">
+		  <span class="stat-number" style="color: #000000">0%</span></div>
+      <h3>A-Level Cambridge Pass Rate</h3>
+    </div>
+    <div class="stat-card">
+      <div class="stat-circle" data-target="15" data-percent="false">
+		  <span class="stat-number" style="color: #00FFFF">0</span></div>
+      <h3>Sports Programs Offered</h3>
+    </div>
+  </div>
+</section>
+
+<section class="school-life fade-in">
+  <h2>Life at Smit Academy</h2>
+  <div class="life-cards">
+    <div class="life-card">
+      <img src="IMG-20251024-WA0254.jpg" alt="Junior School">
+      <div class="life-card-content">
+        <h3>High&nbsp; School</h3>
+        <p>Our High School empowers students with leadership, innovation, and academic excellence — preparing them for success in every path they choose.</p>
+          <a href="learn%20more%20high%20xul.html">Learn More</a>
+      </div>
+    </div>
+    <div class="life-card">
+      <img src="IMG-20251024-WA0255.jpg" alt="High School">
+      <div class="life-card-content">
+        <h3>Junior School</h3>
+        <p>Our Junior School builds a strong foundation of curiosity, creativity, and confidence through hands-on learning and nurturing guidance.</p>
+        <a href="highschool.html">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Smit Academy — Inspiring Growth & Excellence<br>
+  <span>Website created by T. Gawa (+263 782 340 190) & E. Fundira (+263 787 071 
+	097)</span>
+  <div class="socials">
+    <a href="https://instagram.com" target="_blank">I</a>
+    <a href="https://facebook.com" target="_blank">F</a>
+  </div>
+</footer>
+
+<button id="backToTop" title="Go to top">⬆</button>
+
+<script>
+// Fade-in sections
+const faders = document.querySelectorAll('.fade-in');
+const appearOptions = {threshold:0.2, rootMargin:"0px 0px -50px 0px"};
+const appearOnScroll = new IntersectionObserver((entries, observer)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, appearOptions);
+faders.forEach(fader=>appearOnScroll.observe(fader));
+
+// Animate stats
+document.addEventListener("DOMContentLoaded", ()=>{
+  const stats = document.querySelectorAll(".stat-card");
+  stats.forEach(card=>{
+    const circle = card.querySelector(".stat-circle");
+    const number = circle.querySelector(".stat-number");
+    const target = parseInt(circle.getAttribute("data-target"));
+    const isPercent = circle.getAttribute("data-percent")==="true";
+    let current = 0;
+    const animateStat = ()=>{
+      if(current <= target){
+        number.textContent = isPercent ? current + "%" : current;
+        const deg = (isPercent ? current/100 : current/target)*360;
+        circle.style.background = `conic-gradient(#d40000 ${deg}deg, #f0f0f0 ${deg}deg)`;
+        current++;
+        requestAnimationFrame(animateStat);
+      }
+    }
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          animateStat();
+          observer.unobserve(card);
+        }
+      });
+    }, {threshold:0.5});
+    observer.observe(card);
+  });
+});
+
+// Back to top button
+const backToTop = document.getElementById("backToTop");
+window.addEventListener("scroll", ()=>{
+  if(window.scrollY>400) backToTop.classList.add("show");
+  else backToTop.classList.remove("show");
+});
+backToTop.addEventListener("click", ()=>{window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+
+</body>
+</html>

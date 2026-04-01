@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Smit Academy | Live Location</title>
+
+<!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<style>
+  html, body { margin:0; height:100%; }
+  body {
+    font-family: "Poppins", sans-serif;
+    background: #f9f9f9;
+  }
+  header {
+    background: linear-gradient(90deg, #e00000, #b80000);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+  #map {
+    height: calc(100vh - 70px);
+    width: 100%;
+  }
+  /* Custom markers */
+  .school {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #d60000;
+    box-shadow: 0 0 12px rgba(214,0,0,0.5);
+  }
+  .user {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #007bff;
+    box-shadow: 0 0 10px rgba(0,123,255,0.6);
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  </style>
+</head>
+<body>
+
+<header>📍 Smit Academy — Live Map<a href="smit%20wesite1.html">Home</a>
+  <a class="active" href="About_smit.html">About</a>
+  <a href="Admission%20_smit.html">Admissions</a>
+  <a href="Academics_.html">Academics</a>
+  <a href="CONTACT%20.html">Contact</a></header>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+const schoolCoords = { lat: -19.0284, lon: 29.1547 }; // Msasa North, Kwekwe
+
+// Initialize map
+const map = L.map('map').setView([schoolCoords.lat, schoolCoords.lon], 15);
+
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// School marker
+const schoolIcon = L.divIcon({ className: '', html: '<div class="school" title="Smit Academy"></div>', iconSize: [20,20], iconAnchor:[10,10] });
+const schoolMarker = L.marker([schoolCoords.lat, schoolCoords.lon], { icon: schoolIcon })
+  .addTo(map)
+  .bindPopup("<b>Smit Academy</b><br>7511, Msasa North, Kwekwe")
+  .openPopup();
+
+// Track user location
+let userMarker = null;
+if ("geolocation" in navigator) {
+  navigator.geolocation.watchPosition(
+    (position) => {
+      const { latitude, longitude } = position.coords;
+      if (!userMarker) {
+        const userIcon = L.divIcon({ className: '', html: '<div class="user" title="You are here"></div>', iconSize: [14,14], iconAnchor:[7,7] });
+        userMarker = L.marker([latitude, longitude], { icon: userIcon }).addTo(map).bindPopup("Your live location");
+      } else {
+        userMarker.setLatLng([latitude, longitude]);
+      }
+
+      // Adjust map to fit both school and user
+      const bounds = L.latLngBounds([
+        [schoolCoords.lat, schoolCoords.lon],
+        [latitude, longitude]
+      ]);
+      map.fitBounds(bounds.pad(0.3));
+    },
+    (err) => {
+      console.warn("Geolocation error:", err.message);
+      alert("Unable to access your live location. Please enable GPS or allow location access.");
+    },
+    { enableHighAccuracy: true, maximumAge: 10000, timeout: 20000 }
+  );
+} else {
+  alert("Your browser does not support live location tracking.");
+}
+</script>
+
+</body>
+</html>
+

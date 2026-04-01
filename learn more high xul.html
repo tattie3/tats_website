@@ -1,0 +1,180 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smith Academy High School</title>
+  <style>
+    :root { 
+      --accent:#000;
+      --bg:#f4f7ff; 
+      --muted:#4b5563;
+    }
+
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body {
+      font-family:Inter,Arial,sans-serif;
+      background:var(--bg);
+      color:#0f172a;
+      overflow-x:hidden;
+    }
+
+    @keyframes fadeUp {
+      0% {opacity:0; transform: translateY(30px);} 
+      100% {opacity:1; transform: translateY(0);} 
+    }
+    .fade-up {animation: fadeUp 0.9s ease forwards; opacity:0;}
+
+
+    @keyframes slideIn {
+      0% {opacity:0; transform: translateX(-40px);} 
+      100% {opacity:1; transform: translateX(0);} 
+    }
+    .slide-in {animation: slideIn 1s ease forwards; opacity:0;}
+
+
+    header {
+      background:red;
+      box-shadow:0 4px 16px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:30;
+      color:white;
+    }
+
+    .container {max-width:1100px; margin:auto; padding:1rem;}
+
+    nav ul {display:flex; gap:1rem; list-style:none}
+    nav a {
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .hero {
+      padding:4rem 1rem;
+      text-align:center;
+      background:white;
+      margin-bottom:1rem;
+    }
+    .hero h1 {font-size:2.4rem; margin-bottom:.5rem}
+    .hero p {color:var(--muted); max-width:600px; margin:auto;}
+
+    .btn {
+      background:var(--accent);
+      color:white;
+      padding:.6rem 1rem;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-block;
+      margin-top:1rem;
+      transition:0.2s;
+    }
+    .btn:hover {transform:scale(1.05);}
+
+    section {padding:2rem 1rem;}
+    h2 {font-size:1.8rem; margin-bottom:.75rem;}
+    p {max-width:700px; margin-bottom:1rem;}
+
+    .card {
+      background:white;
+      padding:1rem;
+      border-radius:14px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+      animation: fadeUp 0.9s ease forwards;
+      opacity:0;
+      margin-bottom:1rem;
+    }
+
+    .grid {display:grid; gap:1rem}
+    @media(min-width:700px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+
+    footer {
+      background:red;
+      text-align:center;
+      padding:1.5rem;
+      color:white;
+    }
+  </style>
+</head>
+<body>
+
+<header class="fade-up" style="animation-delay:.2s">
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#admissions">Admissions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero fade-up" style="animation-delay:.35s">
+  <h1>Welcome to Smith Academy High School</h1>
+  <p>Where learning, creativity, and community come together for an amazing high-school experience.</p>
+  </section>
+
+<section id="about" class="fade-up" style="animation-delay:.45s">
+  <div class="container">
+    <h2>About Smith Academy</h2>
+    <p>Smith Academy is a public high school offering strong academics, caring staff, and many ways for students to explore their interests.</p>
+
+    <div class="grid">
+      <div class="card" style="animation-delay:.55s">
+        <h3>Our Mission</h3>
+        <p>We help students grow through academic excellence, creativity, and teamwork.</p>
+      </div>
+
+      <div class="card" style="animation-delay:.65s">
+        <h3>School Values</h3>
+        <p>Respect, curiosity, leadership, and building a bright future together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="academics" class="fade-up" style="animation-delay:.75s">
+  <div class="container">
+    <h2>Academics & Programs</h2>
+    <p>We offer a variety of classes including STEM, arts, AP courses, and career programs.</p>
+
+    <div class="grid">
+      <div class="card" style="animation-delay:.85s">
+        <h3>STEM</h3>
+        <p>Hands-on science, math, and robotics opportunities.</p>
+      </div>
+
+      <div class="card" style="animation-delay:.95s">
+        <h3>Arts</h3>
+        <p>Visual art, digital design, , choir, and Drama Club.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="admissions" class="fade-up" style="animation-delay:1.05s">
+  <div class="container">
+    <h2>Admissions</h2>
+    <p>Interested in joining Smith Academy? Here's how to get started.</p>
+    <div class="card" style="animation-delay:1.15s">
+      <h3>How to Apply</h3>
+      <p>Fill out an online form, submit school records, and schedule a tour.</p>
+        <a class="btn" href="Admission%20_smit.html">Apply Now</a>
+    </div>
+  </div>
+
+<footer class="fade-up" style="animation-delay:1.45s">
+  © Smith Academy — All rights reserved
+</footer>
+
+</body>
+</html>
+
+

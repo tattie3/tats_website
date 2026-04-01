@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - School Name</title>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f6fc;
+    }
+    header {
+      background-color: #1d3557;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .container {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #1d3557;
+    }
+    .profiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .profile-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      flex: 1 1 250px;
+      text-align: center;
+    }
+    .profile-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+    footer {
+      text-align: center;
+      background-color: #1d3557;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>School Name</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="admission.html">Admission</a>
+    <a href="academics.html">Academics</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>About Our School</h2>
+  <p>Our school was founded in 1995 with the goal of providing quality education and nurturing every child's full potential. We focus on academic excellence, character building, and holistic development.</p>
+  <p>We believe in creating a safe and inclusive environment for students to learn, grow, and thrive.</p>
+
+  <h2>Meet Our Staff</h2>
+  <div class="profiles">
+    <div class="profile-card">
+      <img src="principal.jpg" alt="Principal">
+      <h3>Mr. John Doe</h3>
+      <p>Principal</p>
+    </div>
+    <div class="profile-card">
+      <img src="teacher1.jpg" alt="Teacher">
+      <h3>Ms. Sarah Lee</h3>
+      <p>Head of Science</p>
+    </div>
+    <div class="profile-card">
+      <img src="teacher2.jpg" alt="Teacher">
+      <h3>Mr. Tom Ndlovu</h3>
+      <p>Head of Mathematics</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+<p>2025 School Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - School Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #004080;
+    }
+
+    .contact-info, .contact-form {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+
+    form button {
+      background-color: #004080;
+      color: white;
+ padding: 10px 20px;
+      border: none;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #004080;
+      color: white;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>School Name</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="admission.html">Admission</a>
+    <a href="academics.html">Academics</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Contact Us</h2>
+
+  <div class="contact-info">
+    <p><strong>Address:</strong> 123 School Road, Harare, Zimbabwe</p>
+    <p><strong>Phone:</strong> +263 77 123 4567</p>
+    <p><strong>Email:</strong> info@schoolname.ac.zw</p>
+    <p><strong>Office Hours:</strong> Mon - Fri: 8:00 AM - 4:00 PM</p>
+  </div>
+
+  <div class="contact-form">
+    <h3>Send Us a Message</h3>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Full Name" required>
+      <input type="email" name="email" placeholder="Your Email Address" required>
+      <textarea name="message" rows="5" placeholder="Type your message here..." required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</div>
+ <footer>
+  <p>2025 School Name. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
